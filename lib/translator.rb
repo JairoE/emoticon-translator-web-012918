@@ -6,9 +6,9 @@ def load_library(file)
   answer = {"get_meaning" => {}, "get_emoticon" =>{}}
 
   hash.each do |feeling, emos|
-    answer["get_meaning"][emo[0]] = feeling
-    answer["get_meaning"][emo[1]] = feeling
-    answer["get_emoticon"][feeling] = emo
+    answer["get_meaning"][emos[0]] = feeling
+    answer["get_meaning"][emos[1]] = feeling
+    answer["get_emoticon"][feeling] = emos
   end
   answer
 end
