@@ -13,17 +13,17 @@ def load_library(file)
 end
 
 def get_japanese_emoticon(english)
-  load_library.each do |feeling, emos|
-    if emos.include?(english)
-      return emos[1]
+  load_library.each do |get, info|
+    if info.keys.include?(english)
+      return info[english]
     end
   end
 end
 
 def get_english_meaning(japanese)
-  load_library.each do |feeling, emos|
-    if emos.include?(japanese)
-      return emos[0]
+  load_library.each do |get, info|
+    if info.keys.include?(japanese)
+      return info[japanese]
     end
   end
 end
