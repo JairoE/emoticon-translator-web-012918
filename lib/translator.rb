@@ -2,7 +2,15 @@
 require 'yaml'
 
 def load_library(file)
-  YAML.load_file(file)
+  hash = YAML.load_file(file)
+  answer = {"get_meaning" => {}, "get_emoticon" =>{}}
+
+  hash.each do |feeling, emos|
+    answer["get_meaning"][emo[0]] = feeling
+    answer["get_meaning"][emo[1]] = feeling
+    answer["get_emoticon"][feeling] = emo
+  end
+  answer
 end
 
 def get_japanese_emoticon(english)
