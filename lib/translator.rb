@@ -12,16 +12,18 @@ def load_library(file)
   answer
 end
 
-def get_japanese_emoticon(english)
-  load_library.each do |get, info|
+def get_japanese_emoticon(file, english)
+  hash = load_library(file)
+  hash.each do |get, info|
     if info.keys.include?(english)
       return info[english]
     end
   end
 end
 
-def get_english_meaning(japanese)
-  load_library.each do |get, info|
+def get_english_meaning(file, japanese)
+  hash = load_library(file)
+  hash.each do |get, info|
     if info.keys.include?(japanese)
       return info[japanese]
     end
