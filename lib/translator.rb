@@ -14,7 +14,7 @@ def get_japanese_emoticon(english)
 end
 
 def get_english_meaning(japanese)
-  load_library.each do |feelingm emos|
+  load_library.each do |feeling, emos|
     if emos.include?(japanese)
       return emos[0]
     end
